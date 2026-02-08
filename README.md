@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ZenSketch
+
+ZenSketch is a serene, web-based mandala drawing application inspired by Mandala_Mind. It offers a relaxing creative experience with symmetrical drawing tools, pastel color palettes, and glassmorphism UI.
+
+## Features
+
+- **Radial Symmetry**: Choose between 6, 8, 12, or 16 segments for intricate patterns.
+- **Smooth Drawing**: Fluid brush strokes that mirror instantly across the canvas.
+- **Glassmorphism UI**: A modern, translucent interface that keeps the focus on your art.
+- **Responsive Design**: Works on desktop and mobile (touch-optimized).
+- **Undo/Redo**: Experiment freely with full history support.
+- **Download**: Save your creations as high-resolution PNG images.
+- **Ambient Audio**: Support for background music (see Assets section).
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment on Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  Push this repository to GitHub.
+2.  Import the project in Vercel.
+3.  Vercel will automatically detect Next.js.
+4.  Click **Deploy**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Assets & Customization
 
-## Learn More
+### Audio
+To enable background ambient music:
+1.  Place an MP3 file named `ambient.mp3` in the `public/audio/` directory.
+2.  The app will automatically load it. A mute toggle is available in the UI.
 
-To learn more about Next.js, take a look at the following resources:
+### Icons
+Icons are provided by `lucide-react`. You can customize them in `src/components/Controls.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app/page.tsx`: Main application entry and state management.
+- `src/components/MandalaCanvas.tsx`: Core drawing logic and symmetry engine.
+- `src/components/Controls.tsx`: UI for tool selection.
+- `src/lib/types.ts`: Type definitions and constants.
+- `src/app/globals.css`: Global styles and animations.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
